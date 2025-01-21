@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Mi Portafolio{% endblock %}
+{% load static %}
+{% block content %}
+<section class="main p-5" id="main">
+  <div class="container p-5">
+    <!-- Logos de tecnologías -->
+    <div class="row align-items-center mb-4">
+        <div class="col-lg-6 d-flex align-items-center">
+            <i class="fab fa-python fa-3x me-3" style="color: #4B8BBE;" title="Python"></i>
+            <i class="fas fa-leaf fa-3x me-3" style="color: #092E20;" title="Django"></i>
+            <i class="fab fa-bootstrap fa-3x me-3" style="color: #7952B3;" title="Bootstrap"></i>
+            <i class="fab fa-html5 fa-3x me-3" style="color: #E34F26;" title="HTML5"></i>
+            <i class="fab fa-css3-alt fa-3x me-3" style="color: #1572B6;" title="CSS3"></i>
+            <i class="fab fa-js fa-3x me-3" style="color: #F7DF1E;" title="JavaScript"></i>
+            <i class="fas fa-database fa-3x" style="color: #336791;" title="PostgreSQL"></i>
+        </div>
+    </div>
+      <div class="row">
+          <!-- Información personal -->
+          <div class="col-lg-6 d-flex flex-column align-items-start justify-content-center">
+              <h3><small>¡Saludos! Soy</small><br> Victor </h3>
+              <h6 class="pt-4">DESARROLLADOR FULLSTACK</h6>
+              <input type="button" value="Mis Proyectos" class="bt1" onclick="window.location.href='{% url 'proyectos' %}'">
+              <input type="button" value="Contrátame" class="bt2" onclick="window.location.href='{% url 'contacto' %}'">
+          </div>
+
+          <!-- Canvas del mandala -->
+          <div class="col-lg-6 d-flex justify-content-center align-items-center">
+              <canvas id="mandalaCanvas" title="Arte Generativo en Canvas"></canvas>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<script src="{% static 'js/mandala.js' %}"></script>
+{% endblock %}

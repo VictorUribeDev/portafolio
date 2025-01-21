@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block content %}
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for proyecto in proyectos %}
+<div class="col">
+    <div class="card h-100">
+        {% if proyecto.imagen %}
+        <img src="{{ proyecto.imagen.url }}" class="card-img-top" alt="Imagen de {{ proyecto.nombre }}">
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{ proyecto.nombre }}</h5>
+            <p class="card-text">{{ proyecto.descripcion|truncatewords:20 }}</p>
+            <div class="mb-3">
+                {% if proyecto.iconos %}
+                    {% for icono in proyecto.iconos|split_icons %}
+                        <i class="fa {{ icono }}" style="font-size: 24px; margin-right: 8px; color: #6c757d;"></i>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            
+            {% if proyecto.link %}
+            <a href="{{ proyecto.link }}" target="_blank" class="btn btn-ver-mas">Ver más</a>
+            {% else %}
+            <button class="btn btn-secondary" disabled>No disponible</button>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+</div>
+{% endblock %}

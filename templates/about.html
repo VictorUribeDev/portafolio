@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="about p-5" id="about">
+    <div class="container p-5">
+        <div class="row align-items-center">
+            <!-- Imagen -->
+            <div class="col-lg-5 col-md-6 col-12 mb-4 mb-lg-0 text-center">
+                <img src="{% static 'images/fancy.me.jpg' %}" data-aos="fade-in" class="img-fluid rounded-circle shadow-lg" alt="Foto de Víctor">
+                <div class="mt-4">
+                    <a href="{% static 'files/curriculumsvitae.pdf' %}" download="Victor_CV.pdf">
+                        <button class="btn btn-primary me-3">Descargar C.V</button>
+                    </a>
+                    <a href="{% url 'contacto' %}">
+                        <button class="btn btn-secondary">Contáctame</button>
+                    </a>
+                </div>
+            </div>
+            <!-- Texto -->
+            <div class="col-lg-7 col-md-6 col-12">
+                <h1 class="mb-3">Sobre mí</h1>
+                <p class="text-primary"><i>Desarrollador Fullstack</i></p>
+                <p class="text-muted">
+                    Soy un desarrollador apasionado y dedicado que se encuentra al comienzo de su viaje en el
+                    mundo de la programación. Con una sólida base en los conceptos fundamentales y un gran interés
+                    por expandir continuamente mi conjunto de habilidades, me impulsa la emoción de resolver problemas
+                    complejos y crear soluciones eficientes y elegantes. Mi camino en la programación comenzó con
+                    la curiosidad sobre cómo la tecnología moldea nuestras vidas diarias, y esta curiosidad rápidamente
+                    se convirtió en una pasión plena.
+                </p>
+                <p class="text-muted">
+                    Lo que me distingue es mi sólida mentalidad analítica y mi capacidad para adaptarme rápidamente a
+                    nuevos desafíos. 
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

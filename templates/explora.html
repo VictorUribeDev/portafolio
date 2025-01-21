@@ -1,0 +1,156 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Explora Arte Generativo</title>  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+    <style>  
+        body {  
+            background-color: #f0f0f0;  
+             
+        }  
+
+        .bubble {  
+            position: absolute;  
+            border-radius: 50%;  
+            background-color: rgba(255, 105, 180, 0.7);  
+            pointer-events: auto; /* Permitir hacer clic en las burbujas */  
+            transition: transform 0.5s, opacity 0.5s;  
+        }  
+
+        .bubble--burst {  
+            transform: scale(0); /* Colapsamos la burbuja al estallar */  
+            opacity: 0; /* Hacemos que desaparezca */  
+        }  
+
+        .btn-back {  
+            position: fixed;  
+            top: 10px;  
+            left: 10px;  
+            z-index: 1000;  
+            background-color: #FF69B4;  
+            color: white;  
+            font-weight: bold;  
+            border: none;  
+            border-radius: 5px;  
+            padding: 10px 20px;  
+            text-decoration: none;  
+            transition: background-color 0.3s ease;  
+        }  
+
+        .btn-back:hover {  
+            background-color: #FF1493;  
+            color: #fff;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+<!-- Botón para volver al home -->
+<a href="/" class="btn-back">Volver al Home</a>
+
+<div class="container mt-4">  
+    <h1 class="text-center mb-4" style="color: #FF69B4; font-weight: bold;">Explora</h1>  
+    <div class="row">  
+        <!-- Botón 1: Burbujas Reventables -->  
+        <div class="col-md-4 mb-4">  
+            <div class="card shadow-lg border-0">  
+                <div class="card-body text-center">  
+                    <h5 class="card-title" style="color: #333;">Burbujas Reventables</h5>  
+                    <button id="bubbleButton" class="btn btn-pink">Generar Burbujas</button>  
+                </div>  
+            </div>  
+        </div>  
+        <!-- Botón 2: Chispitas -->  
+        <div class="col-md-4 mb-4">  
+            <div class="card shadow-lg border-0">  
+                <div class="card-body text-center">  
+                    <h5 class="card-title" style="color: #333;">Chispitas</h5>  
+                    <button id="sparkButton" class="btn btn-pink">Activar Chispitas</button>  
+                </div>  
+            </div>  
+        </div>  
+        <!-- Botón 3: Tercer Efecto -->  
+        <div class="col-md-4 mb-4">  
+            <div class="card shadow-lg border-0">  
+                <div class="card-body text-center">  
+                    <h5 class="card-title" style="color: #333;">Tercer Efecto</h5>  
+                    <button id="thirdButton" class="btn btn-pink">Efecto 3</button>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+</div>  
+
+<script>  
+    document.addEventListener('DOMContentLoaded', function() {  
+        // Funcionalidad para Chispitas  
+        const sparkButton = document.getElementById('sparkButton');  
+        
+        sparkButton.addEventListener('click', function() {  
+            console.log("¡Botón de chispitas clickeado!");  
+            document.body.addEventListener('mousemove', createSparks);  
+        });  
+
+        function createSparks(event) {  
+            const spark = document.createElement('div');  
+            spark.style.position = 'absolute';  
+            spark.style.width = '10px';  
+            spark.style.height = '10px';  
+            spark.style.backgroundColor = 'gold';  
+            spark.style.borderRadius = '100%';  
+            spark.style.left = `${event.pageX - 5}px`;  
+            spark.style.top = `${event.pageY - 5}px`;  
+            spark.style.zIndex = '9999';  
+            spark.style.animation = 'sparkAnimation 0.5s ease-out';  
+            document.body.appendChild(spark);  
+
+            setTimeout(() => {  
+                spark.remove();  
+            }, 500);  
+        }  
+
+        // Funcionalidad para Burbujas  
+        const bubbleButton = document.getElementById('bubbleButton');  
+        
+        bubbleButton.addEventListener('click', function() {  
+            generateBubble();  
+        });  
+
+        function generateBubble() {  
+            const bubble = document.createElement('div');  
+            const size = Math.random() * 50 + 30; // Generar tamaño aleatorio entre 30px y 80px  
+            bubble.classList.add('bubble');  
+            bubble.style.width = `${size}px`;  
+            bubble.style.height = `${size}px`;  
+            bubble.style.left = `${Math.random() * window.innerWidth}px`;  
+            bubble.style.top = `${Math.random() * window.innerHeight}px`;  
+            document.body.appendChild(bubble);  
+            
+            // Evento para reventar la burbuja al hacer clic  
+            bubble.addEventListener('click', function() {  
+                bubble.classList.add('bubble--burst');  
+                setTimeout(() => bubble.remove(), 500); // Eliminar burbuja después de la animación  
+            });  
+        }  
+
+        // Estilos de animación para las chispas  
+        const style = document.createElement('style');  
+        style.innerHTML = `  
+            @keyframes sparkAnimation {  
+                0% {  
+                    transform: scale(1);  
+                    opacity: 1;  
+                }  
+                100% {  
+                    transform: scale(0);  
+                    opacity: 0;  
+                }  
+            }  
+        `;  
+        document.head.appendChild(style);  
+    });  
+</script>  
+</body>  
+</html>

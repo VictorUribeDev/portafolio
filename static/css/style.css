@@ -1,0 +1,423 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: transparent;
+    color: #333;
+    
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-brand:hover {
+    color: #00e1ff;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1rem;
+    padding: 5px 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #00e1ff;
+  }
+  
+  /* Main Section */
+  .main {
+    
+    background-size: cover;
+    padding: 50%;
+    color: rgba(17, 17, 17, 0.836);
+    text-align: left;
+    width: 100%;
+    height: 100vh;
+
+  }
+  
+  .main h3 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .main h6 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .bt1, .bt2 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .bt1 {
+    background-color: #00c0ff;
+    color: #fff;
+  }
+  
+  .bt1:hover {
+    background-color: #005f80;
+    color: #fff;
+  }
+  
+  .bt2 {
+    background-color: transparent;
+    color: #00c0ff;
+    border: 2px solid #00c0ff;
+  }
+  
+  .bt2:hover {
+    background-color: #00c0ff;
+    color: #fff;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 60px 0;
+    background-color: transparent;
+    color: #00c0ff;
+  }
+  
+  .about h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+.about .img-fluid{
+    box-shadow: 10px 10px 91px 0px rgba(255,253,253,0.75);
+    -webkit-box-shadow: 10px 10px 91px 0px rgba(255,253,253,0.75);
+    -moz-box-shadow: 10px 10px 91px 0px rgba(255,253,253,0.75);
+  
+  }
+.about p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+.about .btn1, .about .btn2 {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .about .btn1 {
+    background-color: #00c0ff;
+    color: #fff;
+  }
+  
+  .about .btn1:hover {
+    background-color: #005f80;
+    color: #fff;
+  }
+  
+  .about .btn2 {
+    background-color: transparent;
+    color: #00c0ff;
+    border: 2px solid #00c0ff;
+  }
+  
+  .about .btn2:hover {
+    background-color: #00c0ff;
+    color: #fff;
+  }
+/* Estilos para el contenedor principal */
+
+
+  /* Estilo básico para los íconos */
+footer .social-icon {
+  color: white; /* Color inicial de los íconos */
+  font-size: 1.5rem; /* Tamaño de los íconos */
+  margin: 0 10px; /* Espaciado horizontal entre los íconos */
+  text-decoration: none; /* Quita el subrayado */
+  transition: color 0.3s ease, transform 0.3s ease; /* Animación suave */
+}
+
+/* Efecto hover para los íconos */
+footer .social-icon:hover {
+  color: #0dcaf0; /* Cambia a un color azul (puedes personalizarlo) */
+  transform: scale(1.2); /* Aumenta el tamaño del ícono al pasar el cursor */
+}
+/* Estilos específicos para la página de contacto */
+
+/* Estilos generales para la página de contacto */
+.contacto-page {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.contacto-page .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contacto-page h1 {
+  font-size: 2.5rem;
+  color: #0a0a0a;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Formulario */
+.contacto-page form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.contacto-page form:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Campos de formulario */
+.contacto-page .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contacto-page label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.contacto-page input,
+.contacto-page textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.contacto-page input:focus,
+.contacto-page textarea:focus {
+  border-color: #0d6efd;
+  outline: none;
+}
+
+/* Error del formulario */
+.contacto-page .error {
+  color: #f44336;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Botón de envío */
+.contacto-page button[type="submit"] {
+  background-color: #0d6efd;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contacto-page button[type="submit"]:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Estilos para dispositivos pequeños */
+@media (max-width: 768px) {
+  .contacto-page h1 {
+      font-size: 2rem;
+  }
+
+  .contacto-page .form-group input,
+  .contacto-page .form-group textarea {
+      font-size: 1rem;
+  }
+
+  .contacto-page button[type="submit"] {
+      font-size: 1rem;
+  }
+}
+
+
+/* Logos alineados hacia la izquierda */
+.row.align-items-center .col-lg-6 {
+  justify-content: flex-start; /* Empuja los íconos hacia la izquierda */
+  display: flex; /* Usar Flexbox */
+}
+
+.row.align-items-center .col-lg-6 i {
+  margin-right: 15px; /* Espaciado entre íconos */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el cursor */
+.row.align-items-center .col-lg-6 i:hover {
+  transform: scale(1.2);
+}
+.carousel-item img,
+.carousel-item video {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card {
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: all 0.3s ease; /* Transición suave para hover */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
+  transform: translateY(-5px); /* Movimiento sutil hacia arriba */
+}
+.card-body i {
+  margin-right: 8px; /* Espaciado entre los iconos */
+  font-size: 24px; /* Tamaño de los iconos */
+  color: #6c757d; /* Color suave para los iconos */
+  transition: color 0.3s ease;
+}
+
+.card-body i:hover {
+  color: #007bff; /* Color al pasar el mouse por encima */
+}
+.card-body {
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa); /* Gradiente suave */
+}
+.card-title {
+  font-size: 1.25rem; /* Tamaño de fuente más grande */
+  font-weight: 600; /* Negrita */
+  color: #343a40; /* Color oscuro */
+}
+
+.card-text {
+  font-size: 1rem; /* Tamaño de texto más pequeño */
+  color: #6c757d; /* Color más claro */
+  margin-bottom: 15px; /* Espaciado entre el texto y los iconos */
+}
+@media (max-width: 768px) {
+  .card {
+      margin-bottom: 20px; /* Espaciado en pantallas pequeñas */
+  }
+}
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1); /* Efecto de zoom en la imagen */
+}
+
+/* Fondo con gradiente para el botón 'Ver más' */
+.btn-ver-mas {
+  background: linear-gradient(to right, #007bff, #0056b3); /* Gradiente de azul */
+}
+.btn-ver-mas {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-ver-mas:hover {
+  transform: translateY(-3px); /* Movimiento sutil hacia arriba */
+}
+.btn-ver-mas {
+  border: 2px solid transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-ver-mas:hover {
+  border-color: #0056b3; /* Borde azul al hacer hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+#mandalaCanvas {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #222831, #e7eaee);
+}
+
+@media (max-width: 768px) {
+  #mandalaCanvas {
+      max-width: 300px;
+  }
+}
+/* Archivo: styles.css */
+.btn-pink {
+  background-color: #FF69B4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-pink:hover {
+  background-color: #ff85c5;
+  color: white;
+}
+
+.bubble {
+  position: absolute;
+  background: rgba(135, 206, 235, 0.7);
+  border-radius: 50%;
+  animation: float 5s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.bubble-burst {
+  background: rgba(255, 69, 0, 0.7);
+  transform: scale(1.5);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.spark {
+  position: absolute;
+  background: yellow;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px yellow;
+  animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

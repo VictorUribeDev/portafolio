@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Contactame{% endblock %}
+
+{% block content %}
+<div class="container mt-5 contacto-page">
+    <h1 class="mb-4">Contáctame</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.nombre.label_tag }}
+            {{ form.nombre }}
+        </div>
+        <div class="mb-3">
+            {{ form.email.label_tag }}
+            {{ form.email }}
+        </div>
+        <div class="mb-3">
+            {{ form.asunto.label_tag }}
+            {{ form.asunto }}
+        </div>
+        <div class="mb-3">
+            {{ form.telefono.label_tag }}
+            {{ form.telefono }}
+        </div>
+        <div class="mb-3">
+            {{ form.mensaje.label_tag }}
+            {{ form.mensaje }}
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+{% endblock %}
